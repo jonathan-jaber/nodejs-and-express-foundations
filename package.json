@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-and-express-foundations",
+  "version": "1.0.0",
+  "description": "This repo is for the Node.js and Express Foundations Module. I'm going to go into how this work, and do all the demos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathan-jaber/nodejs-and-express-foundations.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathan-jaber/nodejs-and-express-foundations/issues"
+  },
+  "homepage": "https://github.com/jonathan-jaber/nodejs-and-express-foundations#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
