@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Linkin Park Tickets</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1><img src="/img/globoticket-horizontal-white.svg" alt="GloboTicket" /></h1>
+      <div class="header-cart">
+        <img src="/img/cart.svg" alt="Cart" />
+        <p><span id="cartCount"><%= cartCount %></span> tickets</p>
+      </div>
+    </header>
+
+    <h2>Band Members</h2>
+    <ul>
+      <% members.forEach(m => { %>
+        <li><strong><%= m.name %></strong> — <%= m.role %></li>
+      <% }) %>
+    </ul>
+
+    <h2>Upcoming Concerts</h2>
+    <table>
+      <thead><tr><th>City</th><th>Venue</th><th>Date</th><th>Price</th></tr></thead>
+      <tbody>
+        <% shows.forEach(s => { %>
+          <tr>
+            <td><%= s.city %></td>
+            <td><%= s.venue %></td>
+            <td><%= s.date %></td>
+            <td>$<%= s.price %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8" />
+    <title>Linkin Park Tickets</title>
+<head>
+<body>
+    <div class="container">
+        <header>
+            <h1><img src="/img/globoticket-horizontal-white.svg"></h1>
+            <div class="header-cart">
+                <img src="/img/cart.svg" />
+                <p><span id="cartCount"><%= cartCount %></span> tickets</p>
+            </div>
+        </header>
+        
+        <section>
+            <div class="table">
+                <table>
+                    <thread>
+                        <tr>
+                            <th scope="col">&nbsp;</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thread>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</head>
+</html> -->

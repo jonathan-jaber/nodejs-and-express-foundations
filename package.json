@@ -4,10 +4,12 @@
   "description": "This repo is for the Node.js and Express Foundations Module. I'm going to go into how this work, and do all the demos.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app-express.mjs",
+    "start": "node src/app-express.mjs"
   },
   "repository": {
-    "type": "git",
+    "type": "module",
     "url": "git+https://github.com/jonathan-jaber/nodejs-and-express-foundations.git"
   },
   "keywords": [],
@@ -21,5 +23,8 @@
     "cookie-parser": "^1.4.7",
     "ejs": "^3.1.10",
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
