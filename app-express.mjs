@@ -4,6 +4,8 @@ import cookieParser from 'cookie-parser'
 
 const server = express()
 
+app.use(express.static(join(process.cwd(), 'src', 'public')))
+
 function requestCallback(request, response){
     response.status(200).send(`request received`)
 }
@@ -13,6 +15,17 @@ server.get('/', requestCallback)
 app.get('/simple-text', (request, response) => {
     console.log(`this is some text`)
     response.status(200).set({ 'Content-Type': 'text/plain' }).send(`this is some text`)
+})
+
+app.get('/html-version', (request, response) => {
+    response.status(200).set({ 'Content-Type': 'text/html' })
+    .send(`<h1>HTML Text</h1><p>this is some text in the browser</p>`)
+})
+
+app.get('/concerts', (request, response) => {
+    // const filePath = `${process.cwd()}/src/public/concerts.html`
+    const filePath = join(process.cwd(), 'src', 'public', 'concerts.html')
+    response.status(200).sendFile(filePath)
 })
 
 server.listen(3000)
