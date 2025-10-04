@@ -49,3 +49,9 @@ li {
   margin: 20px 0;
   font-weight: bold;
 }
+
+.globe-logo {
+  height: 60px;
+  display: block;
+  margin: 0 auto 20px;
+}
